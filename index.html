@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Basic HTML5</title>
+</head>
+<body>
+    <h2>HTML5 Basic - ASSIGNMENT</h2>
+
+    <!--What the assignment is about-->
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consectetur lectus vitae orci ultrices, sit
+        amet tempus nunc volutpat. Donec in congue dolor, nec dignissim lacus. Pellentesque in lacus ac dui posuere
+        finibus. Sed sagittis ac elit eu gravida. Duis arcu est, convallis eu pharetra in, euismod sed tellus. Mauris
+        non arcu a diam accumsan condimentum in in erat. Curabitur porta sapien in dapibus varius. Pellentesque habitant
+        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque mattis nunc at justo
+        dapibus, quis pulvinar sapien pellentesque. Maecenas egestas sodales mollis. Integer dolor est, consequat vel
+        nulla quis, blandit porta magna. Integer commodo leo ut posuere laoreet. Fusce pellentesque velit nec nisi
+        pharetra, quis luctus sapien dapibus. Fusce blandit vel elit id dignissim.
+    </p>
+
+
+    <!--Html Lists begin here-->
+    <h4>This Assignment Includes</h4>
+    <ol>
+        <li>Basic Html</li>
+        <li>Graphics</li>
+        <li>Lists</li>
+        <li>Html5 APIs</li>
+        <li>Others</li>
+    </ol>
+    <hr>
+
+
+    <!--Form section begins-->
+    <form>
+        <h4>Subscribe to Our Mailing List</h4>
+        <input type = "text" name = "email" placeholder = "jdoe@cytonn.com">
+        <br><br>
+        <input type = "submit" value = "Submit">
+    </form>
+    <!--Form section ends-->
+    <hr>
+
+
+    <h4>This video automatically plays because of the embeded video plugin</h4>
+    <embed type = "video/mp4" src = "multimedia/priceless.mp4" width = "640" height = "480">
+        <!--The above video automatically plays because the plugin enables it to-->
+        <hr>
+
+
+        <!--Adding section functionality-->
+        <h4>Audio </h4>
+        <audio typeof = "audio/mp3" src = "multimedia/man-comes-around.mp3" controls>
+            Browser does not support
+        </audio>
+        <hr>
+        <!--Audio section ends here-->
+
+
+        <!--Graphics section  begins here-->
+        <section>
+            <h4>All Graphics Will Go into the canvas below</h4>
+            <canvas id="graphicsCanvas" width="200" height="100" style="border: 1px solid #222222">
+                <h4>Graphics Section</h4>
+            </canvas>
+        </section>
+        <!--Graphics section  ends here-->
+        <hr>
+
+
+
+        <!--API test begin here-->
+       <section>
+           <section style="position: relative; top: 80px;">
+
+               <section style="width: 450px; height: 250px; padding: 10px; border: 1px solid #aaaaaa;" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></section>
+               <br>
+               <img id="drag1" src="multimedia/programmers-joke.png" draggable="true" ondragstart="drag(event)" width="350" height="245">
+
+           </section>
+           <script>
+               function allowDrop(ev) {
+                   ev.preventDefault();
+               }
+
+               function drag(ev) {
+                   ev.dataTransfer.setData("text", ev.target.id);
+               }
+
+               function drop(ev) {
+                   ev.preventDefault();
+                   var data = ev.dataTransfer.getData("text");
+                   ev.target.appendChild(document.getElementById(data));
+               }
+           </script>
+
+
+
+       </section>
+        <!--API test end here-->
+        <br> <br> <br> <br>
+        <hr>
+
+
+
+        <!--This is for testing a video tag-->
+        <h4>Video without a plugin</h4>
+        <video src = "multimedia/priceless.mp4" height = "320" width = "250" controls>
+            Browser does not support
+        </video>
+
+
+        <hr>
+        <br> <br>
+
+        <!--Footer begins here-->
+        <footer>
+            Cytonn &copy 2017 - All Rights Reserved
+        </footer>
+        <!--Footer ends here-->
+
+
+</body>
+</html>
